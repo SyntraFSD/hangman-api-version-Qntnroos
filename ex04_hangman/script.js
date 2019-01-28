@@ -22,7 +22,7 @@ function selectRandomWord() {
   request.addEventListener('readystatechange', function (event) {
     if (request.readyState === 4){
       if (request.status >= 200 && request.status < 300){
-        const response= JSON.parse(request.responseText);
+        const response = JSON.parse(request.responseText);
         initGameState(response.random_word);
       }
     }
